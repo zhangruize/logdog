@@ -1,0 +1,19 @@
+{
+    "patterns": [
+        {
+            "line": ".*BIOLOGY_TakePhotoCaptureWorkspace.*onFrameStateUpdate.*",
+            "comment": "Java侧收到算法回调，frameStateUpdate",
+            "outputFormat": "${last-line-timediff} ms|${comment}|${line}"
+        },
+        {
+            "line": ".*BIOLOGY_TakePhotoCaptureWorkspace.*onFrameQualify.*bitmap.*",
+            "comment": "Java侧收到算法回调，frameQuality",
+            "outputFormat": "${last-line-timediff} ms|${comment}|${content}"
+        },
+        {
+            "line": ".*BIOLOGY_TakePhotoCaptureWorkspace.*onGroupMealResult,.*",
+            "comment": "Java侧收到算法回调，complete",
+            "outputFormat": "${last-line-timediff} ms|${comment}|${content}\n\n"
+        }
+    ]
+}

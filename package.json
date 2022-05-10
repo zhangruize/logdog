@@ -1,0 +1,19 @@
+{
+  "name": "logdog",
+  "version": "1.0.0",
+  "description": "logdog is a tool trying to simplify android log analytics. It also can be used as a generic tool for line content reducer.",
+  "bin": {
+    "logdog": "ts-node src/index.ts"
+  },
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "kouma",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.31"
+  },
+  "publishConfig": {
+    "registry": "https://registry.antfin-inc.com"
+  }
+}

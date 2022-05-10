@@ -1,0 +1,42 @@
+{
+    "linePatterns": [
+        {
+            "inputFormat": "${month}-${day} ${hours}:${minutes}:${seconds}.${ms} ${content}"
+        }
+    ],
+    "varPatterns": [
+        {
+            "id": "month",
+            "regex": "[0-9]{1,2}"
+        },
+        {
+            "id": "day",
+            "regex": "[0-9]{1,2}"
+        },
+        {
+            "id": "hours",
+            "regex": "[0-9]{1,2}"
+        },
+        {
+            "id": "minutes",
+            "regex": "[0-9]{1,2}"
+        },
+        {
+            "id": "seconds",
+            "regex": "[0-9]{1,2}"
+        },
+        {
+            "id": "ms",
+            "regex": "[0-9]{1,3}"
+        },
+        {
+            "id": "content",
+            "regex": ".*"
+        }
+    ],
+    "defaultOutputFormat": "${line}",
+    "autoInsertLineBreak": true,
+    "warnings": {
+        "unrecoginizedLine": false
+    }
+}
