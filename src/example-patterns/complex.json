@@ -1,0 +1,32 @@
+{
+    "patterns": [
+        {
+            "id": "addCallback",
+            "line": ".*callbackRecord.*",
+            "outputFormat": "addCallback, ${last-addCallback-timediff} ms | \t\t\t${line}"
+        },
+        {
+            "id": "receiveState",
+            "line": ".*StateUpdate.*",
+            "outputFormat": "stateUpdate, -addCallback: ${last-addCallback-timediff} ms | \t\t\t${line}"
+        },
+        {
+            "id": "fireState",
+            "line": ".*fireEvent state.*",
+            "outputFormat": "fireState: -receiveState: ${last-receiveState-timediff} ms | \t\t\t${line}"
+        },
+        {
+            "id": "fireComplete",
+            "line": ".*fireEvent Complete.*",
+            "outputFormat": "fireComplete, -receiveComplete: ${last-receiveComplete-timediff} ms | \t\t\t${line}"
+        },
+        {
+            "line": "*localCompleteEvent.*",
+            "outputFormat": "localComplete, -fireComplete: ${last-fireComplete-timediff} ms | \t\t\t${line} \n"
+        },
+        {
+            "line": ".*remoteCompleteEvent.*",
+            "outputFormat": "remoteComplete，-fireComplete: ${last-fireComplete-timediff} ms | \t\t\t${line} \n"
+        }
+    ]
+}

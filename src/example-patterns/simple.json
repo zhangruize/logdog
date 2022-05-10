@@ -1,0 +1,8 @@
+{
+    "patterns": [
+        {
+            "line": ".*30198 .*",
+            "outputFormat": "${last-line-timediff} ms | ${line}"
+        }
+    ]
+}

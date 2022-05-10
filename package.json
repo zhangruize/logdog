@@ -1,19 +1,17 @@
 {
-  "name": "logdog",
-  "version": "1.0.0",
-  "description": "logdog is a tool trying to simplify android log analytics. It also can be used as a generic tool for line content reducer.",
+  "name": "linecat",
+  "version": "1.0.1",
+  "description": "linecat is a tool trying to simplify android log analytics. It also can be used as a generic tool for line content reducer.",
   "bin": {
-    "logdog": "ts-node src/index.ts"
+    "linecat": "./linecat"
   },
   "scripts": {
-    "test": "npm run test"
+    "build": "tsc && find src -name '*.json'|xargs -I{} cp {} build "
   },
-  "author": "kouma",
+  "repository": "https://github.com/zhangruize/logdog",
+  "author": "ruize",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^17.0.31"
-  },
-  "publishConfig": {
-    "registry": "https://registry.antfin-inc.com"
   }
 }
